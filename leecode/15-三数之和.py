@@ -5,7 +5,7 @@ def threeSum(nums):
     '''
     # 对列表进行排序
     nums.sort()
-    ans, k = [], 0
+    ans = 0
     for k in range(len(nums) - 2):
         # 如果出现最小元素为正数，则不存在和为0的情况，直接返回
         if nums[k] > 0:
