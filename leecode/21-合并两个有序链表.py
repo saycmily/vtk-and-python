@@ -6,10 +6,15 @@ class ListNode:
 
 
 def mergeTwoLists(l1, l2):
-    # if !l1:
-    #     return l2
-    # if !l2:
+    # 递归效率低
+    # if not l1:return l2
+    # if not l2:return l1
+    # if l1.val < l2.val:
+    #     l1.next = self.mergeTwoLists(l1.next, l2)
     #     return l1
+    # else:
+    #     l2.next = self.mergeTwoLists(l1, l2.next)
+    #     return l2
     b = ListNode(0)
     a = b
     while l1 and l2:

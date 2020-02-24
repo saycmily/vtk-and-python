@@ -1,4 +1,7 @@
 # Definition for singly-linked list.
+# 分治法
+
+
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -6,9 +9,9 @@ class ListNode:
 
 
 def mergeKLists(self, lists):
-    if not lists:
-        return
     n = len(lists)
+    if not n:
+        return
     return self.merge(lists, 0, n-1)
 
 
