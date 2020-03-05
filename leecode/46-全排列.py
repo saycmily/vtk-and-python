@@ -1,4 +1,4 @@
-def permute(self, nums):
+def permute(nums):
     def backtrack(first=0):
         if first == n:
             output.append(nums[:])
@@ -11,3 +11,6 @@ def permute(self, nums):
     output = []
     backtrack()
     return output
+
+
+print(permute([1, 2, 3, 4]))
