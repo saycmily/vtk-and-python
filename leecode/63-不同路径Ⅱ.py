@@ -4,11 +4,16 @@ def uniquePathsWithObstacles(self, obstacleGrid):
     if obstacleGrid[0][0] == 1:
         return 0
     obstacleGrid[0][0] = 1
+    flag = True
     for i in range(1, m):
-        obstacleGrid[i][0] = int(obstacleGrid[i][0] == 0 and obstacleGrid[i-1][0] == 1)
-
+        if obstacleGrid[i][0] == 1:
+            flag = False
+        obstacleGrid[i][0] = 1 if flag else 0
+    flag = True
     for j in range(1, n):
-        obstacleGrid[0][j] = int(obstacleGrid[0][j] == 0 and obstacleGrid[0][j-1] == 1)
+        if obstacleGrid[0][j] == 1:
+            flag = False
+        obstacleGrid[0][j] = 1 if flag else 0
 
     for i in range(1, m):
         for j in range(1, n):
