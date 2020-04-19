@@ -8,17 +8,19 @@ class TreeNode:
 
 class Solution:
     def levelOrderBottom(self, root: TreeNode):
+        from collections import deque
         ans = []
         if not root:
             return ans
-
-        def func(root, level):
-            if len(ans) == level:
-                ans.append([])
-            ans[level].append(root.val)
-            if root.left:
-                func(root.left, level+1)
-            if root.right:
-                func(root.right, level+1)
-        func(root, 0)
+        q = deque([root])
+        while q:
+            size = len(q)
+            ans.append([])
+            for i in range(size):
+                node = q.popleft()
+                ans[-1].append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
         return ans[::-1]

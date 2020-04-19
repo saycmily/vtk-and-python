@@ -8,23 +8,42 @@ class TreeNode:
 
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode):
-        levels = []
-        direction = []
+        # 队列循环
+        from collections import deque
+        ans = []
         if not root:
-            return levels
+            return ans
+        q = deque([root])
+        direction = False
+        while q:
+            size = len(q)
+            ans.append([])
+            direction = not direction
+            for i in range(size):
+                node = q.popleft()
+                ans[-1].append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            if not direction:
+                ans[-1].reverse()
+        return ans
 
-        def helper(node, level):
-            if len(levels) == level:
-                levels.append([])
-                direction.append((direction[-1]+1) % 2)
-            if direction[level]:
-                levels[level].append(node.val)
-            else:
-                levels[level].insert(0, node.val)
-            if node.left:
-                helper(node.left, level + 1)
-            if node.right:
-                helper(node.right, level + 1)
-        direction.append(1)
-        helper(root, 0)
-        return levels
+        # 数组递归
+        # levels = []
+        # if not root:
+        #     return levels
+        # def helper(node, level):
+        #     if len(levels) == level:
+        #         levels.append([])
+        #     levels[level].append(node.val)
+        #     if node.left:
+        #         helper(node.left, level + 1)
+        #     if node.right:
+        #         helper(node.right, level + 1)
+        # helper(root, 0)
+        # for i in range(len(levels)):
+        #     if i % 2 != 0:
+        #         levels[i].reverse()
+        # return levels
