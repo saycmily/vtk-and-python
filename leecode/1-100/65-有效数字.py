@@ -1,4 +1,8 @@
 def isNumber(self, s: str) -> bool:
+    # import re
+    # p = re.compile(r'^[+-]?(\.\d+|\d+\.?\d*)([eE][+-]?\d+)?$')
+    # return bool(p.match(s.strip()))
+
     # try:
     #     num = float(s)
     #     return True
