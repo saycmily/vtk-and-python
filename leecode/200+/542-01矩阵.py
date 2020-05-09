@@ -6,7 +6,7 @@ class Solution:
         m = len(matrix)
         n = len(matrix[0])
         # 刮痧的起始
-        zeroes_pos = \  
+        zeroes_pos = \
             [(i, j) for i in range(m) for j in range(n) if matrix[i][j] == 0]
         Q = deque(zeroes_pos)
         visited = set(zeroes_pos)
