@@ -14,7 +14,7 @@ class Solution:
         if not root:
             return ans
         q = deque([root])
-        direction = False
+        direction = True
         while q:
             size = len(q)
             ans.append([])
@@ -28,6 +28,7 @@ class Solution:
                     q.append(node.right)
             if not direction:
                 ans[-1].reverse()
+            direction = not direction
         return ans
 
         # 数组递归
