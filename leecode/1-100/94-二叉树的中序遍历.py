@@ -7,13 +7,18 @@ class TreeNode:
 
 
 class Solution:
-    def inorderTraversal(self, root):
-        ans = []
-
-        def func(root):
-            if root:
-                func(root.left)
-                ans.append(root.val)
-                func(root.right)
-        func(root)
-        return ans
+    def inorderTraversal(self, root: TreeNode):
+        if not root:
+            return []
+        stack = []
+        res = []
+        cur = root
+        while stack or cur:
+            while cur:
+                stack.append(cur)
+                cur = cur.left
+            if stack:
+                cur = stack.pop()
+                res.append(cur.val)
+                cur = cur.right
+        return res
