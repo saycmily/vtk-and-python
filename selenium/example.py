@@ -28,13 +28,13 @@ print(driver.title)
 driver.save_screenshot("baidu.png")
 
 # id="kw"是百度搜索输入框，输入字符串"长城"
-driver.find_element_by_id("kw").send_keys(u"马云")
+driver.find_element_by_id("kw").send_keys(u"长城")
 
 # id="su"是百度搜索按钮，click() 是模拟点击
 driver.find_element_by_id("su").click()
 
 # 获取新的页面快照
-driver.save_screenshot("马云.png")
+driver.save_screenshot("长城.png")
 
 # 打印网页渲染后的源代码
 print(driver.page_source)
@@ -49,7 +49,7 @@ driver.find_element_by_id("kw").send_keys(Keys.CONTROL, 'a')
 driver.find_element_by_id("kw").send_keys(Keys.CONTROL, 'x')
 
 # 输入框重新输入内容
-driver.find_element_by_id("kw").send_keys(u"王健林")
+driver.find_element_by_id("kw").send_keys(u"王")
 
 # 模拟Enter回车键
 driver.find_element_by_id("su").send_keys(Keys.RETURN)
@@ -58,7 +58,7 @@ driver.find_element_by_id("su").send_keys(Keys.RETURN)
 driver.find_element_by_id("kw").clear()
 
 # 生成新的页面快照
-driver.save_screenshot("王健林.png")
+driver.save_screenshot("王.png")
 
 # 获取当前url
 print(driver.current_url)
