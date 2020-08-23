@@ -11,9 +11,9 @@ class Solution:
         def func(node):
             if not node:
                 return 0
-            l = func(node.left)
+            left = func(node.left)
             r = func(node.right)
-            if not l or not r:
-                return max(l, r) + 1
-            return min(l, r) + 1
+            if not left or not r:
+                return max(left, r) + 1
+            return min(left, r) + 1
         return func(root)
