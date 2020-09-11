@@ -1,18 +1,17 @@
 class Solution:
     def combinationSum3(self, k: int, n: int):
-
-        def back(candidates, cur, target):
-            if len(cur) == k and target == 0:  # 回溯的退出条件
-                res.append(cur.copy())
-            for i in range(len(candidates)):
-                # 若出现逆序，则剪枝，防止出现重复的情况例如 [1,2] [2,1]是一种
-                if len(cur) > 0 and candidates[i] < cur[-1]:
-                    continue
-                cur.append(candidates[i])
-                back(candidates[i+1:], cur, target-candidates[i])
-                cur.pop()  # 记得恢复之前的状态
+        def backtrack(tmp, tmp_sum=0, first=0):
+            if len(tmp) == k and tmp_sum == n:  # 回溯的退出条件
+                res.append(tmp.copy())
+                return
+            for i in range(first, 9):
+                if tmp_sum + candidates[i] > n:
+                    break
+                tmp.append(candidates[i])
+                backtrack(tmp, tmp_sum + candidates[i], i+1)
+                tmp.pop()  # 记得恢复之前的状态
 
         res = []
-        nums = [i for i in range(1, 10)]
-        back(nums, [], n)
+        candidates = [i for i in range(1, 10)]
+        backtrack([])
         return res

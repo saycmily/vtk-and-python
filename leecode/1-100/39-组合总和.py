@@ -1,15 +1,18 @@
-def combinationSum(self, candidates, target):
-    candidates.sort()
-    n = len(candidates)
-    res = []
+class Solution:
+    def combinationSum(self, candidates, target: int):
+        candidates.sort()
+        n = len(candidates)
+        res = []
 
-    def helper(i, tmp_sum, tmp):
-        if tmp_sum > target or i == n:
-            return
-        if tmp_sum == target:
-            res.append(tmp)
-            return
-        helper(i, tmp_sum + candidates[i], tmp + [candidates[i]])
-        helper(i+1, tmp_sum, tmp)
-    helper(0, 0, [])
-    return res
+        def backtrack(tmp, tmp_sum=0, first=0):
+            if tmp_sum == target:
+                res.append(tmp.copy())
+                return
+            for j in range(first, n):
+                if tmp_sum + candidates[j] > target:
+                    break
+                tmp.append(candidates[j])
+                backtrack(tmp, tmp_sum + candidates[j], j)
+                tmp.pop()
+        backtrack([])
+        return res
