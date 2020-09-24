@@ -9,4 +9,4 @@ def permuteUnique(self, nums):
     res = []
     n = len(nums)
     backtrack()
-    return list(res)
+    return res
