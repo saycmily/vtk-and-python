@@ -1,10 +1,11 @@
 # import os
 # SOCKET_USER_FOLDER_PATH = "D:\\heihei"
-# path = SOCKET_USER_FOLDER_PATH + '\\cmily'
+# path = "D:/szyjy/notebook/jupyter_notebook_config.py"
 # # if not os.path.exists(path):
 # #     os.mkdir(path)
-# fp_old = open(SOCKET_USER_FOLDER_PATH+'\\111.txt', 'r')
+# fp_old = open(path, 'r')
 # lines = fp_old.readlines()
+# print(lines[286])
 # port = '9999'
 # print(lines[-2].split(' ')[-1][:-1])
 
@@ -14,5 +15,5 @@
 #     new_config_str = ''.join(lines)
 #     f.write(new_config_str)
 
-a,b,*rest = [1,2,3,4]
-print(a,b,rest)
+# a,b,*rest = [1,2,3,4]
+# print(a,b,rest)

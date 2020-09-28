@@ -8,7 +8,7 @@ class TreeNode:
 
 class Solution:
     def buildTree(self, inorder, postorder) -> TreeNode:
-        if not postorder:
+        if not postorder or not inorder:
             return None
         root = TreeNode(postorder[-1])
         x = inorder.index(postorder[-1])
