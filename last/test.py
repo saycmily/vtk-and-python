@@ -17,3 +17,12 @@
 
 # a,b,*rest = [1,2,3,4]
 # print(a,b,rest)
+# import re
+# message = 'level: I'
+# res = re.match(r'level:\s(\w)', message)
+# if res:
+#     print(res.group(1)=='I')
+import time
+timestr = "2020-9-29 17:30:30"
+tiemcamp = time.mktime(time.strptime(timestr, '%Y-%m-%d %H:%M:%S'))
+print(tiemcamp)
