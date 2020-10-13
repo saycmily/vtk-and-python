@@ -22,7 +22,19 @@
 # res = re.match(r'level:\s(\w)', message)
 # if res:
 #     print(res.group(1)=='I')
-import time
-timestr = "2020-9-29 17:30:30"
-tiemcamp = time.mktime(time.strptime(timestr, '%Y-%m-%d %H:%M:%S'))
-print(tiemcamp)
+# import time
+# timestr = "2020-9-29 17:30:30"
+# tiemcamp = time.mktime(time.strptime(timestr, '%Y-%m-%d %H:%M:%S'))
+# print(tiemcamp)
+# from flask_wtf import Form
+# class A:
+#     pass
+# class B(A):
+#     pass
+# class C(B):
+#     pass
+# print(issubclass(C,A))
+class a():
+    cla = 'aaa'
+    def __init__(self):
+        self.dd = 'bbb'
