@@ -14,7 +14,7 @@ class Solution:
     def connect(self, root):
         if root:
             l, r = root.left, root.right
-            while l:
+            while l and r:
                 l.next = r
                 l = l.right
                 r = r.left
