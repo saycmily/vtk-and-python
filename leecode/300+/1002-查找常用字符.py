@@ -1,5 +1,5 @@
 class Solution:
-    def commonChars(self, A: List[str]) -> List[str]:
+    def commonChars(self, A: list[str]) -> list[str]:
         res = []
         if not A:
             return res
