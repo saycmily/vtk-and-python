@@ -39,8 +39,10 @@
 #     def __init__(self):
 #         self.dd = 'bbb'
 
-import time
-import datetime
-s = '20201010-072732-ca18'
-a = time.strptime(s[:15], '%Y%m%d-%H%M%S')
-print(str(datetime.datetime(*a[:6])))
+# import time
+# import datetime
+# s = '20201010-072732-ca18'
+# a = time.strptime(s[:15], '%Y%m%d-%H%M%S')
+# print(str(datetime.datetime(*a[:6])))
+
+print(sorted("12133"))
