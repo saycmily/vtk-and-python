@@ -1,7 +1,7 @@
 import collections
 
 class Solution:
-    def removeDuplicateLetters(self, s) -> int:
+    def smallestSubsequence(self, s: str) -> str:
         stack = []
         seen = set()
         remain_counter = collections.Counter(s)

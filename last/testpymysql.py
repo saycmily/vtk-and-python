@@ -5,6 +5,5 @@ from test import a
 # cursor.execute("SELECT * FROM Student")
 # print(cursor.fetchall())
 
-def a():
-    return [(1,3)],(3,4)
-print(a())
+a = {1:1,2:2}
+print(a.get(3,4))
