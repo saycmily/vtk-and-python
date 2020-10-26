@@ -45,4 +45,18 @@
 # a = time.strptime(s[:15], '%Y%m%d-%H%M%S')
 # print(str(datetime.datetime(*a[:6])))
 
-print(sorted("12133"))
+# print(sorted("12133"))
+
+import matplotlib.pyplot as plt
+lw = 2
+plt.figure(figsize=(10,5))
+plt.plot([0.1, 0.2, 0.3], [0.2, 0.4, 0.4], color='darkorange',
+         lw=lw, label='ROC curve (area = %0.2f)' % 0.99) ###假正率为横坐标，真正率为纵坐标做曲线
+plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver operating characteristic example')
+plt.legend(loc="lower right")
+plt.show()
