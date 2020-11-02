@@ -61,4 +61,18 @@
 # plt.title('Receiver operating characteristic example')
 # plt.legend(loc="lower right")
 # plt.show()
-print('123' > '124')
+# print('123' > '124')
+# def func():
+#     with open('jupyter.py', 'r', encoding='utf-8') as f:
+#         a = f.readline()
+#         a = a.split(',')
+#         if False:
+#             return a
+#     return a
+# print(func())
+lines = ["a","b","v"]
+for i in lines:
+    if i == "b":
+        lines.remove(i)
+        break
+print(lines)
