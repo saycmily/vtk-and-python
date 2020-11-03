@@ -91,19 +91,19 @@ class MiniPlotTool:
 if __name__ == '__main__' :
     # test
     baseConfig = {
-        #'figsize' : (6,8),
-        #'axis': [0,10,0,10],
-        #'title' : 'hello title',
-        #'ylabel' : 'hello ylabel',
+        'figsize' : (6,8),
+        'axis': [0,10,0,10],
+        'title' : 'hello title',
+        'ylabel' : 'hello ylabel',
         'grid' : True,
-        #'xaxis_locator' : 0.5,
-        #'yaxis_locator' : 1,
-        #'legend_loc' : 'upper right'
+        'xaxis_locator' : 0.5,
+        'yaxis_locator' : 1,
+        'legend_loc' : 'upper right'
     }
     tool = MiniPlotTool(baseConfig)
-    X = [ i for i in range(100)]
-    Y = [random.uniform(1,100) for i in range(100)]
-    Y2 = [random.uniform(1,100) for i in range(100)]
+    X = [ i for i in range(10)]
+    Y = [random.uniform(1,10) for i in range(10)]
+    Y2 = [random.uniform(1,10) for i in range(10)]
     lineConf = {
         'X' : X,
         'Y' : Y
