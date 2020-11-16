@@ -70,9 +70,15 @@
 #             return a
 #     return a
 # print(func())
-lines = ["a","b","v"]
-for i in lines:
-    if i == "b":
-        lines.remove(i)
-        break
-print(lines)
+# lines = {"a":"b"}
+# a = map(lambda x: x+'c', lines)
+# print(list(a))
+# for i in lines:
+#     if i == "b":
+#         lines.remove(i)
+#         break
+# print(lines)
+# a = lines.items()
+# print(a[0])
+import tensorflow
+print('a')
