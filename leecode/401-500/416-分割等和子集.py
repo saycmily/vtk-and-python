@@ -1,5 +1,7 @@
+from collections import defaultdict
+
 class Solution:
-    def canPartition(self, nums: List[int]) -> bool:
+    def canPartition(self, nums: list[int]) -> bool:
         n = len(nums)
         he = sum(nums)
         if he % 2 == 1 or n < 2:
