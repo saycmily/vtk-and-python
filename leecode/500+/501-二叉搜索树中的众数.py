@@ -7,7 +7,7 @@ class TreeNode:
 
 
 class Solution:
-    def findMode(self, root: TreeNode) -> List[int]:
+    def findMode(self, root: TreeNode):
         from collections import Counter
         self.nums = []
         def mid(node):
