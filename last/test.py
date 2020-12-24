@@ -80,5 +80,22 @@
 # print(lines)
 # a = lines.items()
 # print(a[0])
-import tensorflow
-print('a')
+
+# with open('cmily.csv', 'r', encoding='utf-8') as f:
+#     message = f.readlines()
+# ans = set()
+# for i in message:
+#     a = i.split(',')
+#     if a[2] in ans:
+#         print(a[1])
+#     else:
+#         ans.add(a[2])
+
+from docx import Document
+from docx.shared import Inches
+
+doc = Document()
+doc.add_heading("艾克")
+doc.add_paragraph("dasdasfdsgsddsh")
+doc.add_picture("C:/Users/cmily/Desktop/文件/壁纸/0014.jpg", width = Inches(7.0))
+doc.save("cmily.doc")
