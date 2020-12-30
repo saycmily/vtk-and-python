@@ -34,7 +34,7 @@ for i in range(12):
     # 使用get方法进行提交
     content_json = requests.get(url, headers=headers, params=data).json()
     # 返回了一个json，里面是每一页的数据
-    for item in content_json["app_msg_list"]:    
+    for item in content_json["app_msg_list"]:
     # 提取每页文章的标题及对应的url
         items = []
         items.append(item["title"])
