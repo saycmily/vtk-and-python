@@ -17,9 +17,8 @@ def rotate(nums, k):
     # reverse函数
     nums[:-k] = reversed(nums[:-k])
     nums[-k:] = reversed(nums[-k:])
-    nums[:] = reversed(nums[:])
-    print(nums)
-
+    # nums[:] = reversed(nums)
+    nums.reverse()
 
 nums = [1, 2, 3, 4, 5, 6]
 k = 2
