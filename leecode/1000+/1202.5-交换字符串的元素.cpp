@@ -19,7 +19,7 @@ struct unionfind {
     }
     void merge(int a, int b) {
         int p = find(a), q = find(b);
-        if (p != q) f[p] = q;
+        f[p] = q;
     }
 };
 class Solution {
