@@ -1,3 +1,4 @@
 last/socket.io-example/node_modules
 last/test.py
 *.exe
+test.*
