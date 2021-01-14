@@ -6,7 +6,7 @@ class Solution {
         
         String regex0 = "(\\d|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5])";
         String regexIPv4 = regex0 + "(\\." + regex0 + "){3}";
-        String regex1 = "([\\da-fA-F]{1,4})";
+        String regex1 = "[\\da-fA-F]{1,4}";
         String regexIPv6 = regex1 + "(:" + regex1 + "){7}";
         
         String result = "Neither";
@@ -20,7 +20,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution a = new Solution();
-        String x = a.validIPAddress("2001:0db8:85a3:0:0:8A2E:0370:7334");
+        String x = a.validIPAddress("172.16.254.1");
         System.out.println(x);
     }
 }

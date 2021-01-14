@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch RegexExample",
+            "request": "launch",
+            "mainClass": "RegexExample",
+            "projectName": "401-500_ff8c158e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "401-500_ff8c158e"
+        },
+        {
             "name": "g++.exe - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
