@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Trie",
+            "request": "launch",
+            "mainClass": "Trie",
+            "projectName": "201-300_95bf978a"
+        },
+        {
             "name": "Python: 当前文件",
             "type": "python",
             "request": "launch",

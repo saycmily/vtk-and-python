@@ -1,4 +1,4 @@
-class Solution {
+class Solution468 {
     public String validIPAddress(String IP) {
         if (IP == null) {
             return "Neither";
@@ -19,7 +19,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution a = new Solution();
+        Solution468 a = new Solution468();
         String x = a.validIPAddress("172.16.254.1");
         System.out.println(x);
     }
