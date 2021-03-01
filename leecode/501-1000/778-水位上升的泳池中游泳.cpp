@@ -44,7 +44,8 @@ public:
         }// for
         UnionFind uf(n * m);
         while(!pq.empty()) {
-            node t = pq.top(); pq.pop();
+            node t = pq.top(); 
+            pq.pop();
             uf.merge(t.x, t.y);
             if (uf.Find(0) == uf.Find(n * m - 1))
                 return t.h;
