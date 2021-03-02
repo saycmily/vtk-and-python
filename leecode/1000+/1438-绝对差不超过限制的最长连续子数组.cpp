@@ -16,7 +16,7 @@ public:
             asc.push_back(right);
             desc.push_back(right);
            //超过阈值了，缩窗口，维护最值
-            while (abs(nums[asc.front()] - nums[desc.front()]) > limit) {
+            while (abs(nums[desc.front()] - nums[asc.front()]) > limit) {
                 left++;
                 if (!asc.empty() && asc.front() < left)
                     asc.pop_front();
