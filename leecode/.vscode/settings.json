@@ -5,6 +5,11 @@
         "string": "cpp",
         "xlocale": "cpp",
         "xstring": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "ios": "cpp",
+        "list": "cpp",
+        "system_error": "cpp",
+        "vector": "cpp",
+        "xhash": "cpp"
     }
 }
